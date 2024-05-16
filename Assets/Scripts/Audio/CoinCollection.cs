@@ -9,17 +9,13 @@ public class CoinCollection : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            // ”ничтожаем монету
             Destroy(other.gameObject);
 
-            // ”величиваем количество собранных монет
             collectedCoins++;
 
-            // ѕровер€ем, собраны ли все монеты
             if (collectedCoins == totalCoins)
             {
                 Debug.Log("All coins collected!");
-                // «десь можно добавить дополнительные действи€, когда все монеты собраны
             }
         }
     }
