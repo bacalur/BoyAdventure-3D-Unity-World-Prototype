@@ -9,13 +9,17 @@ public class CoinCollection : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
+            // Destroy the coin
             Destroy(other.gameObject);
 
+            // Increase the number of collected coins
             collectedCoins++;
 
+            // Check if all coins are collected
             if (collectedCoins == totalCoins)
             {
                 Debug.Log("All coins collected!");
+                // Additional actions can be added here when all coins are collected
             }
         }
     }
